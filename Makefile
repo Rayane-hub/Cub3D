@@ -8,7 +8,7 @@ CC				= cc
 # Drapeaux de compilation
 CFLAGS = -Wall -Werror -Wextra
 
-SRC		= main.c
+SRC		= main.c gnl/get_next_line.c gnl/get_next_line_utils.c
 
 OBJ         = $(SRC:.c=.o)
 
