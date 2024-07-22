@@ -6,28 +6,37 @@
 /*   By: rasamad <rasamad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 15:47:16 by rasamad           #+#    #+#             */
-/*   Updated: 2024/07/20 16:21:25 by rasamad          ###   ########.fr       */
+/*   Updated: 2024/07/22 18:34:24 by rasamad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 #define CUB3D_H
 
-#include "gnl/get_next_line.h"
-#include <stdio.h>
- #include <fcntl.h>
- #include <unistd.h>
-
+# include "gnl/get_next_line.h"
+# include <stdio.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdbool.h>
 //# include "minilibx-linux/mlx.h"
 # include <stdlib.h>
 # include <math.h>
+# include "libft/libft.h"
 
 typedef struct s_color
 {
-	int	r;
-	int	g;
-	int	b;
+	int		r;
+	int		g;
+	int		b;
+	bool	check;
 }	t_color;
+
+typedef struct s_double
+{
+	bool	no;
+	bool	so;
+}	t_double;
+
 
 typedef struct s_texture
 {
@@ -107,6 +116,7 @@ typedef struct s_data
 	int				endian;
 	int				width;
 	int				height;
+	int				nb_param;
 	t_color			sky;
 	t_color			floor;
 	t_player		player;
@@ -167,6 +177,19 @@ typedef struct s_data
 	// La distance perpendiculaire entre le joueur et le mur touché par le rayon, utilisée pour corriger l'effet "fisheye".
 
 //void raycasting(t_data *data, t_player *player);
+
+int ft_check_arg(t_data *data, char *arg_map);
+int ft_strlen_cub(char *s, int choice);
+int	ft_get_texture(t_data *data);
+char	*ft_strdup_cub(char *str, int choice);
+int	ft_fillC_color(t_data *data, char *gnl, int	i);
+int	ft_fillF_color(t_data *data, char *gnl, int	i);
+int	ft_getC_color(t_data *data, char *gnl);
+int	ft_getF_color(t_data *data, char *gnl);
+int	ft_get_no(t_data *data, char *gnl);
+int	ft_get_so(t_data *data, char *gnl);
+int	ft_get_we(t_data *data, char *gnl);
+int	ft_get_ea(t_data *data, char *gnl);
 
 
 #endif

@@ -2,15 +2,14 @@
 NAME	= cub3D
 
 # Compiler and flags
-CC				= cc
-
+CC		= cc
 
 # Drapeaux de compilation
 CFLAGS = -Wall -Werror -Wextra
 
-SRC		= main.c gnl/get_next_line.c gnl/get_next_line_utils.c
+SRC		= main.c get_color.c get_texture.c utils.c gnl/get_next_line.c gnl/get_next_line_utils.c
 
-OBJ         = $(SRC:.c=.o)
+OBJ		= $(SRC:.c=.o)
 
 all : $(NAME)
 
@@ -19,7 +18,7 @@ all : $(NAME)
 	printf "\033[1A\033[KCompiling $<\r"
 
 $(NAME): $(OBJ)
-	 $(CC) $(OBJ) -o $(NAME) #@make -sC libft && -L libft -l ft 
+	@make -sC libft && $(CC) $(OBJ) -L libft -l ft -o $(NAME)
 	printf "\033[38;5;220m\033[1A\033[KExecutable $(NAME) created\n\033[0m"
 
 clean :
