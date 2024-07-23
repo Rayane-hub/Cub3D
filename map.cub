@@ -1,17 +1,15 @@
-NO      ./textures/eagle.xpm
+NO	   ./textures/eagle.xpm
 SO      ./textures/greystone.xpm
 
-EA      ./textures/red.xpm
+EA		./wrong/path
 WE      ./textures/purplestone.xpm
 F       220,100,69
-
 C       225,30,16
 
-
-
-
-111111
-100101
-101001
-1100N1
-111111
+1234
+123
+1
+123456
+12345678911
+1   
+1010101100101010011100212122122201210

@@ -6,7 +6,7 @@
 /*   By: rasamad <rasamad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 15:47:16 by rasamad           #+#    #+#             */
-/*   Updated: 2024/07/22 18:34:24 by rasamad          ###   ########.fr       */
+/*   Updated: 2024/07/23 16:43:36 by rasamad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,14 +182,17 @@ int ft_check_arg(t_data *data, char *arg_map);
 int ft_strlen_cub(char *s, int choice);
 int	ft_get_texture(t_data *data);
 char	*ft_strdup_cub(char *str, int choice);
-int	ft_fillC_color(t_data *data, char *gnl, int	i);
-int	ft_fillF_color(t_data *data, char *gnl, int	i);
-int	ft_getC_color(t_data *data, char *gnl);
-int	ft_getF_color(t_data *data, char *gnl);
+int	ft_fill_color_c(t_data *data, char *gnl, int	i);
+int	ft_fill_color_f(t_data *data, char *gnl, int	i);
+int	ft_get_color_c(t_data *data, char *gnl);
+int	ft_get_color_f(t_data *data, char *gnl);
 int	ft_get_no(t_data *data, char *gnl);
 int	ft_get_so(t_data *data, char *gnl);
 int	ft_get_we(t_data *data, char *gnl);
 int	ft_get_ea(t_data *data, char *gnl);
+
+void	ft_free_data(t_data data);
+
 
 
 #endif

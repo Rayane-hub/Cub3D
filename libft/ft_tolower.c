@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rasamad <rasamad@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: rasamad <rasamad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:13:59 by rasamad           #+#    #+#             */
-/*   Updated: 2024/04/11 15:10:42 by rasamad          ###   ########.fr       */
+/*   Updated: 2024/07/23 14:35:56 by rasamad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,4 @@ int	ft_tolower(int c)
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
-}
-int main()
-{
-	char str[] = "ABCD";
-	int i = 1;
-	while (str[i] != '\0')
-	{
-		printf("%c", ft_tolower(str[i]));
-		i++;
-	}
-	
 }
