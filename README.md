@@ -53,4 +53,5 @@ Lancez le programme avec une carte valide :
 ---
 
 ## 📸 Exemple visuel
+<img width="3790" height="1947" alt="Screenshot from 2025-10-21 21-56-06" src="https://github.com/user-attachments/assets/32fde89f-aa0c-40ca-962d-ea7076d8e4de" />
 
